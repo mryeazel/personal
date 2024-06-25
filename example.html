@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Points on a map</title>
+    <title>Demo: Add points to a web map</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
     <link
@@ -29,14 +29,14 @@
       mapboxgl.accessToken = 'pk.eyJ1IjoibXJ5ZWF6ZWwiLCJhIjoiY2x4dG4wcmg0MDNrbzJxcHZ4ZnRuNW94ZSJ9.5eG_5Q2M_9USsB6aO7ufcQ';
       const map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mryeazel/clxtjkwd300pr01po8ao8fn2a',
-        center: [-0.378536, 39.490927],
-        zoom: 11.5
+        style: 'mapbox://styles/examples/clg45vm7400c501pfubolb0xz',
+        center: [-87.661557, 41.893748],
+        zoom: 10.7
       });
 
       map.on('click', (event) => {
         const features = map.queryRenderedFeatures(event.point, {
-          layers: ['Valencia']
+          layers: ['chicago-parks']
         });
         if (!features.length) {
           return;
