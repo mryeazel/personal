@@ -27,16 +27,43 @@
     <div id="map"></div>
     <script>
       // The value for 'accessToken' begins with 'pk...'
-      mapboxgl.accessToken = ' <pk.eyJ1IjoibXJ5ZWF6ZWwiLCJhIjoiY2x4dG1vdXRmMXd2MTJqcHZxaml5cGptdSJ9.ExZLokrINXLU1gduT8pc6w> ';
+      mapboxgl.accessToken = 'pk.eyJ1IjoibXJ5ZWF6ZWwiLCJhIjoiY2x4dG4wcmg0MDNrbzJxcHZ4ZnRuNW94ZSJ9.5eG_5Q2M_9USsB6aO7ufcQ';
       const map = new mapboxgl.Map({
         container: 'map',
         // Replace YOUR_STYLE_URL with your style URL.
         style: 'mapbox://styles/mryeazel/clxtjkwd300pr01po8ao8fn2a',
-        center: [-87.661557, 41.893748],
-        zoom: 10.7
+        center: [-0.378536, 39.490927],
+        zoom: 10.9
       });
 
       // Code from the next step will go here.
+
+      /*
+Add an event listener that runs
+  when a user clicks on the map element.
+*/
+map.on('click', (event) => {
+  // If the user clicked on one of your markers, get its information.
+  const features = map.queryRenderedFeatures(event.point, {
+    layers: ['Valencia'] // replace with your layer name
+  });
+  if (!features.length) {
+    return;
+  }
+  const feature = features[0];
+
+  // Code from the next step will go here.
+  /*
+    Create a popup, specify its options
+    and properties, and add it to the map.
+  */
+const popup = new mapboxgl.Popup({ offset: [0, -15] })
+  .setLngLat(feature.geometry.coordinates)
+  .setHTML(
+    `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+  )
+  .addTo(map);
+});
     </script>
   </body>
 </html>
