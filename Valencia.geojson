@@ -1,0 +1,49 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Home",
+        "description": "C. de Xiva, 42, Patraix, 46018 València, Spain"
+      },
+      "geometry": {
+        "coordinates": [-0.393363, 39.466759],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Train Station",
+        "description": "C/ de Sant Vicent Màrtir, 171, Extramurs, 46007 València, Valencia, Spain"
+      },
+      "geometry": {
+        "coordinates": [-0.382615, 39.461172],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "ProtoQSAR",
+        "description": "Av. Benjamín Franklin, 12, 46980 Paterna, Valencia, Spain"
+      },
+      "geometry": {
+        "coordinates": [-0.460843, 39.548097],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "EUROACE",
+        "description": "Carrer de Colón, 18, L'Eixample, 46004 València, Valencia, Spain"
+      },
+      "geometry": {
+        "coordinates": [-0.37353, 39.467889],
+        "type": "Point"
+      }
+    }
+  ],
+  "type": "FeatureCollection"
+}
